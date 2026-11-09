@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101b55">
+<meta name="description" content="AI Content Academy — Free Learning For Everyone">
+<link rel="manifest" href="manifest.webmanifest">
+<title>AI Content Academy</title>
+<style>
+:root{--navy:#101b55;--blue:#3157d5;--purple:#7545c8;--gold:#f5c84c;--bg:#f4f6ff;--ink:#172044}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
+header{background:linear-gradient(120deg,var(--navy),var(--purple));color:white;padding:24px 18px 28px;border-radius:0 0 24px 24px}
+header .tag{color:#ffe58a;font-weight:700;font-size:13px}h1{font-size:26px;line-height:1.2;margin:8px 0}header p{margin:5px 0;color:#e8eaff}
+main{max-width:850px;margin:auto;padding:16px}.card{background:white;border-radius:16px;padding:17px;margin:12px 0;box-shadow:0 3px 14px #17204412}
+h2{font-size:20px;margin:0 0 10px;color:var(--navy)}h3{font-size:17px;margin:14px 0 5px}
+button,.btn{border:0;border-radius:11px;background:var(--blue);color:white;padding:11px 15px;font-weight:700;font-size:15px;cursor:pointer}
+button.secondary{background:#e9edff;color:var(--navy)}button:focus{outline:3px solid #f5c84c}
+.tabs{display:flex;gap:8px;overflow:auto;padding:5px 0}.tabs button{white-space:nowrap}
+.lesson{border:1px solid #e3e7f7;border-radius:13px;padding:12px;margin:9px 0;background:#fff}
+.lesson small{color:#5b6483}.lesson button{margin-top:8px}
+.prompt{background:#f1f3ff;padding:12px;border-radius:10px;white-space:pre-wrap}
+li{margin:5px 0}.muted{color:#626b88;font-size:14px}
+.progress{height:10px;background:#e4e8f8;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#3157d5,#8b54d4);width:0}
+.quiz label{display:block;padding:8px;background:#f6f7ff;border-radius:9px;margin:7px 0}
+footer{text-align:center;color:#667;margin:24px 0;font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="tag">FREE LEARNING FOR EVERYONE</div><h1>🤖 AI Content Academy</h1><p>Learn AI. Create Anything.</p><p>AI सिकौँ, सिर्जना गरौँ — सुरुदेखि विशेषज्ञसम्म</p></header>
+<main>
+<section class="card">
+<h2>स्वागत छ! 👋</h2>
+<p>यो AI सिक्ने प्रारम्भिक मोबाइल एप हो। पाठ पढ्नुहोस्, अभ्यास गर्नुहोस् र आफ्नो प्रगति मोबाइलमै सुरक्षित राख्नुहोस्।</p>
+<p class="muted">नोट: AI टुलका निःशुल्क प्रयोगमा सीमा हुन सक्छ। इन्टरनेट/डेटा शुल्क लाग्न सक्छ।</p>
+<div class="progress"><span id="bar"></span></div><p id="progressText" class="muted">० / ८ पाठ पूरा</p>
+</section>
+<section class="card"><h2>पाठहरू</h2><div id="lessonList"></div></section>
+<section class="card" id="lessonArea"><h2>पाठ खोल्नुहोस्</h2><p>माथिको सूचीबाट कुनै पाठ छान्नुहोस्।</p></section>
+<section class="card"><h2>सुरक्षा सम्झना 🔒</h2><ul><li>पासवर्ड, OTP वा बैंक विवरण AI मा नलेख्नुहोस्।</li><li>अरूको फोटो/आवाज अनुमति बिना नक्कल नगर्नुहोस्।</li><li>AI ले दिएको जानकारी जाँचेर मात्र प्रयोग गर्नुहोस्।</li></ul></section>
+<footer>AI Content Academy · Build 04 Fixed Prototype</footer>
+</main>
+<script>
+const lessons=[
+{t:"AI भनेको के हो?",d:"AI ले उदाहरण र डाटाबाट ढाँचा सिकेर उत्तर, सुझाव वा सामग्री बनाउन सहयोग गर्छ।",o:"AI को आधारभूत अर्थ बुझ्ने।",s:"नमस्कार! आज हामी AI के हो भनेर बुझ्छौँ। AI भनेको मानिसले बनाएको यस्तो प्रविधि हो जसले भाषा, तस्बिर र आवाजसँग सम्बन्धित काममा सहयोग गर्न सक्छ।",p:["Chrome खोल्नुहोस्।","कुनै AI chat सेवा खोल्नुहोस्।","यो प्रश्न लेख्नुहोस्: AI भनेको के हो? मलाई सजिलो नेपालीमा उदाहरणसहित बुझाऊ।","उत्तर पढ्नुहोस् र बुझ्न गाह्रो भएको कुरा फेरि सोध्नुहोस्।"],q:"AI भनेको के हो?",h:"AI का ३ वटा दैनिक जीवनका उदाहरण लेख्नुहोस्।",quiz:["AI ले कुन काममा सहयोग गर्न सक्छ?","AI ले सधैँ सही उत्तर दिन्छ?","गोप्य पासवर्ड AI मा लेख्नु सुरक्षित हो?"],a:[0,1,1],opts:[["भाषा र तस्बिरसम्बन्धी काम","मोबाइल चार्ज मात्र","स्क्रिन सफा"],["हो","होइन, जाँच्नुपर्छ","सधैँ"],["हो","होइन","कहिलेकाहीँ"]]},
+{t:"Prompt Writing",d:"Prompt भनेको AI लाई दिइने स्पष्ट निर्देशन वा प्रश्न हो।",o:"स्पष्ट र उपयोगी निर्देशन लेख्न सिक्ने।",s:"राम्रो Prompt ले AI बाट राम्रो नतिजा पाउन मद्दत गर्छ। काम, शैली, भाषा र आवश्यक विवरण खुलाउनुहोस्।",p:["AI chat खोल्नुहोस्।","लेख्नुहोस्: मलाई ३० सेकेन्डको नेपाली YouTube भिडियोको स्क्रिप्ट बनाइदेऊ। विषय: बिहानको स्वस्थ बानी। भाषा सरल राख।","उत्तरमा सुधार चाहिएको भाग फेरि स्पष्ट निर्देशन दिएर माग्नुहोस्।"],q:"तपाईं एक शिक्षक हुनुहुन्छ। कक्षा ५ का विद्यार्थीलाई पानी बचतबारे ५ वाक्यमा सरल नेपालीमा बुझाउनुहोस्।",h:"आफ्नो मनपर्ने विषयमा २ फरक Prompt लेख्नुहोस्।",quiz:["राम्रो Prompt कस्तो हुन्छ?","भाषा उल्लेख गर्दा के फाइदा हुन्छ?","पहिलो उत्तर मन परेन भने?"],a:[1,0,2],opts:[["अस्पष्ट","स्पष्ट र विवरणयुक्त","एक शब्द"],["नतिजा लक्षित बनाउन","इन्टरनेट बन्द गर्न","फोन छिटो बनाउन"],["त्यहीँ रोक्ने","गाली गर्ने","थप स्पष्ट निर्देशन दिने"]]},
+{t:"AI बाट पहिलो फोटो",d:"Text-to-image सेवामा विवरण लेखेर नयाँ तस्बिर बनाउन सकिन्छ।",o:"विषय, शैली र पृष्ठभूमि भएको Prompt बनाउने।",s:"आज हामी AI बाट पहिलो फोटो बनाउन सिक्छौँ। आफूले चाहेको दृश्य स्पष्ट वर्णन गर्नुहोस्।",p:["AI image generator खोल्नुहोस्।","Text to Image विकल्प छान्नुहोस्।","तलको Prompt कपी गरेर राख्नुहोस्।","Generate थिच्नुहोस् र नतिजा हेर्नुहोस्।"],q:"A beautiful small Nepali village beside green hills at sunrise, realistic photography, warm natural light, detailed landscape, no text.",h:"आफ्नो गाउँ वा मनपर्ने ठाउँको फोटो Prompt बनाउनुहोस्।",quiz:["Text-to-image मा के दिइन्छ?","Prompt मा शैली लेख्दा?","अरूको निजी फोटो अनुमति बिना अपलोड गर्नु ठीक हो?"],a:[0,1,1],opts:[["शब्द/वर्णन","फोन नम्बर","पासवर्ड"],["नतिजाको शैली बताउन","ब्याट्री बढाउन","डेटा मेटाउन"],["हो","होइन","सधैँ"]]},
+{t:"Realistic, Cartoon र 3D",d:"एउटै विषयलाई फरक दृश्य शैलीमा वर्णन गर्न सकिन्छ।",o:"तीन शैलीका Prompt छुट्याउने।",s:"Realistic वास्तविक फोटो जस्तो, Cartoon चित्रकथाजस्तो र 3D त्रिआयामिक देखिने शैली हो।",p:["AI image generator खोल्नुहोस्।","एउटै विषय राखेर शैली परिवर्तन गर्नुहोस्।","हरेक शैलीको नतिजा तुलना गर्नुहोस्।"],q:"A friendly baby elephant in a forest, 3D animated movie style, soft cinematic lighting, highly detailed.",h:"एउटै पात्रका realistic, cartoon र 3D Prompt लेख्नुहोस्।",quiz:["Realistic ले के जनाउँछ?","3D मा कस्तो अनुभूति हुन्छ?","शैली बदल्न कुन भाग बदल्ने?"],a:[0,1,2],opts:[["वास्तविक फोटो जस्तो","हातले लेखेको","आवाज"],["गहिराइ/आयाम","केवल कालो","कुनै फरक छैन"],["Style description","फोनको नाम","पासवर्ड"]]},
+{t:"Consistent AI Character",d:"एउटै पात्रलाई विभिन्न दृश्यमा उस्तै राख्न वर्णन र reference image उपयोगी हुन्छ।",o:"पात्रको स्थिर विवरण बनाउने।",s:"एउटै पात्र बारम्बार चाहिँदा कपाल, कपडा, उमेर, रङ र विशेषता स्थिर राख्नुहोस्।",p:["पात्रको नाम र रूपको विवरण लेख्नुहोस्।","हरेक दृश्यमा त्यही विवरण पुनः प्रयोग गर्नुहोस्।","टुलले reference image समर्थन गर्छ भने उही reference प्रयोग गर्नुहोस्।"],q:"Same character: a young Nepali woman with shoulder-length black hair, teal jacket, round glasses. Scene: standing in a sunny library, cinematic illustration.",h:"आफ्नो पात्रको ५ स्थिर विशेषता लेख्नुहोस्।",quiz:["पात्र उस्तै राख्न के चाहिन्छ?","हरेक दृश्यमा कपडा बदल्दा?","Reference image ले के गर्न सक्छ?"],a:[0,1,2],opts:[["स्थिर विवरण","हरेक पटक फरक पात्र","केवल फरक नाम"],["पात्रको निरन्तरता बिग्रन सक्छ","सधैँ उस्तै हुन्छ","कुनै असर हुँदैन"],["पात्रलाई सन्दर्भ दिन","इन्टरनेट बढाउन","फाइल zip गर्न"]]},
+{t:"Text बाट AI Video",d:"केही AI सेवाले लेखिएको निर्देशन वा तस्बिरबाट छोटो भिडियो बनाउन सक्छन्।",o:"दृश्य, गति र क्यामेरा निर्देशन लेख्ने।",s:"Text-to-video मा दृश्य र गति वर्णन गर्नुहोस्। उपलब्धता र निःशुल्क सीमा टुलअनुसार फरक हुन्छ।",p:["Text-to-video समर्थन गर्ने सेवा खोल्नुहोस्।","Prompt लेख्नुहोस्।","यदि उपलब्ध छ भने अवधि र aspect ratio छान्नुहोस्।","Generate गर्नुहोस् र नतिजा जाँच्नुहोस्।"],q:"A peaceful Nepali mountain village at sunrise, prayer flags moving gently in the breeze, slow cinematic camera push-in, natural light.",h:"५–८ सेकेन्डको दृश्यका लागि Prompt लेख्नुहोस्।",quiz:["Text-to-video मा के दिइन्छ?","Camera movement ले?","हरेक सेवा असीमित निःशुल्क हुन्छ?"],a:[0,1,1],opts:[["Text prompt","बैंक कार्ड","पासवर्ड"],["क्यामेरा कसरी चल्छ बताउँछ","आवाज बन्द गर्छ","भाषा बदल्छ"],["हो","होइन","सधैँ"]]},
+{t:"AI Voice र नेपाली आवाज",d:"Text-to-speech ले लेखिएको पाठलाई आवाजमा बदल्न सक्छ।",o:"नेपाली narration तयार गर्ने आधार बुझ्ने।",s:"आज हामी AI Voice र नेपाली narration बुझ्छौँ। पुरुष वा महिला आवाजको विकल्प टुलअनुसार फरक हुन्छ।",p:["Text-to-speech सेवा खोल्नुहोस्।","नेपाली पाठ लेख्नुहोस्।","भाषा र उपलब्ध आवाज छान्नुहोस्।","Preview सुनेर आवश्यक सुधार गर्नुहोस्।"],q:"नमस्कार! AI Content Academy मा तपाईंलाई स्वागत छ। आज हामी नयाँ कुरा सिक्दैछौँ।",h:"आफ्नो २० सेकेन्डको नेपाली narration लेख्नुहोस्।",quiz:["TTS को अर्थ?","अरूको आवाज नक्कल गर्न?","आवाज बनाउने टुलमा के जाँच्ने?"],a:[0,1,2],opts:[["Text-to-speech","Photo-to-song","Text-to-screen"],["अनुमति चाहिन्छ","अनुमति चाहिँदैन","लुकाएर गर्ने"],["भाषा/आवाज र प्रयोग अनुमति","फोनको रंग","क्यामेराको आकार"]]},
+{t:"मोबाइल भिडियो Editing",d:"भिडियो काट्ने, subtitle, आवाज र दृश्य मिलाउने काम editing हो।",o:"सामान्य editing workflow बुझ्ने।",s:"भिडियो राम्रो बनाउन अनावश्यक भाग काट्नुहोस्, subtitle थप्नुहोस् र आवाज सन्तुलन मिलाउनुहोस्।",p:["मोबाइलमा video editor खोल्नुहोस्।","New project छान्नुहोस् र आफ्नो भिडियो आयात गर्नुहोस्।","अनावश्यक भाग काट्नुहोस्।","Subtitle र audio मिलाएर preview गर्नुहोस्।","उपयुक्त resolution मा export गर्नुहोस्।"],q:"Create a clean 30-second educational video with clear Nepali subtitles, balanced voice-over, simple transitions, and readable text.",h:"१५–३० सेकेन्डको छोटो भिडियो सम्पादन गर्नुहोस्।",quiz:["Trim भनेको?","Subtitle किन उपयोगी?","Export अघि के गर्ने?"],a:[0,1,2],opts:[["अनावश्यक भाग काट्ने","आवाज बढाउने","फोटो खिच्ने"],["बुझ्न सजिलो बनाउन","ब्याट्री चार्ज गर्न","नेटवर्क बढाउन"],["Preview जाँच्ने","फोन बन्द गर्ने","फाइल मेटाउने"]]}
+];
+const done=JSON.parse(localStorage.getItem("aca_done")||"[]");
+function update(){document.getElementById("bar").style.width=(done.length/lessons.length*100)+"%";document.getElementById("progressText").textContent=done.length+" / "+lessons.length+" पाठ पूरा";}
+function renderList(){document.getElementById("lessonList").innerHTML=lessons.map((l,i)=>`<div class="lesson"><b>${i+1}. ${l.t}</b> ${done.includes(i)?"✅":""}<br><small>${l.o}</small><br><button onclick="openLesson(${i})">पाठ खोल्नुहोस्</button></div>`).join("");update()}
+function openLesson(i){let l=lessons[i];let area=document.getElementById("lessonArea");area.innerHTML=`<h2>पाठ ${i+1}: ${l.t}</h2><p><b>उद्देश्य:</b> ${l.o}</p><p>${l.d}</p><h3>🤖 Robot Teacher Script</h3><p>${l.s}</p><h3>📱 Android Practical Steps</h3><ol>${l.p.map(x=>`<li>${x}</li>`).join("")}</ol><h3>📋 Copyable Prompt</h3><div class="prompt" id="prompt">${l.q}</div><button class="secondary" onclick="copyPrompt()">Prompt Copy गर्नुहोस्</button><h3>📝 गृहकार्य</h3><p>${l.h}</p><h3>❓ Quiz</h3><div class="quiz">${l.quiz.map((q,j)=>`<p><b>${j+1}. ${q}</b></p>${l.opts[j].map((v,k)=>`<label><input type="radio" name="q${j}" value="${k}"> ${v}</label>`).join("")}`).join("")}</div><button onclick="checkQuiz(${i})">उत्तर जाँच्नुहोस्</button><p id="quizResult"></p>`;area.scrollIntoView({behavior:"smooth"});}
+function copyPrompt(){let t=document.getElementById("prompt").innerText;if(navigator.clipboard)navigator.clipboard.writeText(t).then(()=>alert("Prompt copy भयो"));else alert(t)}
+function checkQuiz(i){let l=lessons[i],score=0;for(let j=0;j<3;j++){let v=document.querySelector(`input[name=q${j}]:checked`);if(v&&Number(v.value)===l.a[j])score++}let r=document.getElementById("quizResult");r.textContent=`तपाईंको अंक: ${score}/3`;if(score>=2&&!done.includes(i)){done.push(i);localStorage.setItem("aca_done",JSON.stringify(done));renderList();}}
+renderList();
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+</script>
+</body></html>
