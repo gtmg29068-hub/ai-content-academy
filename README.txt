@@ -1,18 +1,7 @@
-AI CONTENT ACADEMY — BUILD 04 FIXED
-
-Files:
-- index.html: main mobile-first learning app
-- manifest.webmanifest: PWA manifest
-- sw.js: basic offline cache
-- icons/: app icons
-
-Upload the CONTENTS of this folder to the ROOT of a public GitHub repository (not the ZIP itself). Keep the icons folder and its two PNG files in place.
-Then enable GitHub Pages from Settings > Pages > Deploy from a branch > main > /(root) > Save.
-
-IMPORTANT LIMITATIONS:
-- This is a PWA/web app prototype, NOT an Android APK.
-- No real robot-teacher videos or real Android screen recordings are included; lessons contain scripts and practical steps.
-- AI generation services are not embedded; learners use third-party tools.
-- Lessons are currently in Nepali. English translation is not complete.
-- Progress is stored locally in the browser on this device; there is no account or cloud sync.
-- Third-party AI services may have free-tier limits, paid features, and data/internet costs.
+AI Content Academy - Build 04 Resent
+This is a mobile-friendly PWA prototype, not an Android APK.
+Upload the contents of this folder to the root of your GitHub Pages repository.
+Do not upload passwords or API keys. Test the website after publishing.
+Lessons include starter scripts, practical steps, prompts, homework and quizzes.
+Progress is saved locally in the browser only. No cloud sync or embedded AI generation.
+Third-party AI tools may have free-tier limits and may charge for some features.
